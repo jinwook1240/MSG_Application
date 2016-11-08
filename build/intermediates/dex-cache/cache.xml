@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_e596886f3d267ab348711364a7474550939bc9a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_84a37275b8d4167e77162846e1d06bf1bf001049.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7b92ab3b60df314fc62f6d06c3fcc63cf50eb57a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_52836826562b2ffa2f54de0212fe8f3b0ee88ed9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_a2770c12b6494e3929381369a2d04e09da605d13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_37173fa28443b48871c1b8607037e35ac625ece6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_a44fd6fceeb66f5689aab6c546972be871226fac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_c54f94876f834d1e8a48ed213b9adcdfd30845a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_1f11e0e3d04d5d7512c16291081ad395e9b66b98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_63373fa2eb7e9435fcb0bfef3389cf4a0a601bbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_f4d22beb34cf21a5654f918585906added6a748e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_8d0c46f81071e8ed11449c0ed7d6216002383ed4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_86ff363cd63ecd9131e86a815bdf275b9852ba85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_32656ad78ab1b07f6a858ed1ebf748f025f51d48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_913756933b818db1eb7ed2ea5a22cf932a73e9b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\core\core.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="51ed0b0e26301288ac6fd894ed0248fcf6e98546">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\core_8e2d47c0a2851f8e4e09dfb58f36f3f16ed36539.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_ab5fceaeec602886b0df4008d38730dad97f0ff2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_da1687e2505dd47279b441eaa4c33aa8513433a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_b837a01eb78c67a20b2502958b7afa40abdff944.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_894becb9d2ac39edb9caeb9411b065316ad47afb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_bb57e7990c41dd8015ea50bd35511b3515c5789b.jar" />
+    </item>
+
+</items>
