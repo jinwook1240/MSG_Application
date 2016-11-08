@@ -11,12 +11,12 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <service
-        android:name="com.example.msg_application.service.BTCTemplateService"
+        android:name="com.example.msg_application.subtitle.service.BTCTemplateService"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:icon="@drawable/ic_launcher"
         android:label="MSGBluetoothService" >
         <intent-filter>
-            <action android:name="com.example.msg_application.service.BTCTemplateService" />
+            <action android:name="com.example.msg_application.subtitle.service.BTCTemplateService" />
         </intent-filter>
     </service>
 

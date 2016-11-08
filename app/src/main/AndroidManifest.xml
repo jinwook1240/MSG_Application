@@ -61,12 +61,12 @@
             android:value="@integer/google_play_services_version" />
     </application>
     <service
-        android:name= "com.example.msg_application.service.BTCTemplateService"
+        android:name= "com.example.msg_application.subtitle.service.BTCTemplateService"
         android:icon="@drawable/ic_launcher"
         android:label= "MSGBluetoothService"
         android:configChanges="keyboardHidden|orientation|screenSize" >
         <intent-filter>
-            <action android:name="com.example.msg_application.service.BTCTemplateService"/>
+            <action android:name="com.example.msg_application.subtitle.service.BTCTemplateService"/>
         </intent-filter>
     </service>
 <uses-feature android:name="android.hardware.camera"/>

@@ -116,7 +116,7 @@ MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\CLP\D
 		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:61:13-66
 	android:name
 		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:60:13-58
-service#com.example.msg_application.service.BTCTemplateService
+service#com.example.msg_application.subtitle.service.BTCTemplateService
 ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:63:5-71:15
 	android:label
 		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:66:9-45
@@ -125,13 +125,13 @@ ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\mai
 	android:icon
 		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:65:9-45
 	android:name
-		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:64:9-79
-intent-filter#com.example.msg_application.service.BTCTemplateService
+		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:64:9-88
+intent-filter#com.example.msg_application.subtitle.service.BTCTemplateService
 ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:68:9-70:25
-action#com.example.msg_application.service.BTCTemplateService
-ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:69:13-92
+action#com.example.msg_application.subtitle.service.BTCTemplateService
+ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:69:13-101
 	android:name
-		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:69:21-90
+		ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:69:21-99
 uses-feature#android.hardware.camera
 ADDED from C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\src\main\AndroidManifest.xml:72:1-55
 	android:name

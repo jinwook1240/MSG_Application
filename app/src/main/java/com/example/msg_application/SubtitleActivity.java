@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.msg_application.subtitle.service.BTCTemplateService;
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
 
@@ -160,6 +163,98 @@ public class SubtitleActivity extends Activity
             //mEditChat.setText("");    주석이므로 낙서를 하여도 상관없다!
         }
 
+
+    }
+
+
+
+
+
+
+
+
+    BTCTemplateService mService;
+    mActivityHandler = new ActivityHandler();
+
+
+    public class ActivityHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg)
+        {
+            switch(msg.what) {
+                // Receives BT state messages from service
+                // and updates BT state UI
+                case Constants.MESSAGE_BT_STATE_INITIALIZED:
+                    mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                            getResources().getString(R.string.bt_state_init));
+                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_invisible));
+                    break;
+                case Constants.MESSAGE_BT_STATE_LISTENING:
+                    mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                            getResources().getString(R.string.bt_state_wait));
+                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_invisible));
+                    break;
+                case Constants.MESSAGE_BT_STATE_CONNECTING:
+                    mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                            getResources().getString(R.string.bt_state_connect));
+                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_away));
+                    break;
+                case Constants.MESSAGE_BT_STATE_CONNECTED:
+                    if(mService != null) {
+                        String deviceName = mService.getDeviceName();
+                        if(deviceName != null) {
+                            mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                                    getResources().getString(R.string.bt_state_connected) + " " + deviceName);
+                            mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_online));
+                        }
+                    }
+                    break;
+                case Constants.MESSAGE_BT_STATE_ERROR:
+                    mTextStatus.setText(getResources().getString(R.string.bt_state_error));
+                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_busy));
+                    break;
+
+                // BT Command status
+                case Constants.MESSAGE_CMD_ERROR_NOT_CONNECTED:
+                    mTextStatus.setText(getResources().getString(R.string.bt_cmd_sending_error));
+                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_busy));
+                    break;
+
+                ///////////////////////////////////////////////
+                // When there's incoming packets on bluetooth
+                // do the UI works like below
+                ///////////////////////////////////////////////
+                case Constants.MESSAGE_READ_CHAT_DATA:
+                    if(msg.obj != null) {
+                        ExampleFragment frg = (ExampleFragment) mSectionsPagerAdapter.getItem(FragmentAdapter.FRAGMENT_POS_EXAMPLE);
+                        TestFragment tfrg = (TestFragment) mSectionsPagerAdapter.getItem(FragmentAdapter.FRAGMENT_POS_EXAMPLE);
+                        frg.showMessage((String)msg.obj);
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+            super.handleMessage(msg);
+        }
+
+    }	// End of class ActivityHandler
+
+
+    public void OnFragmentCallback(int msgType, int arg0, int arg1, String arg2, String arg3, Object arg4) {
+        switch(msgType) {
+            case IListener.CALLBACK_RUN_IN_BACKGROUND:
+                if(mService != null)
+                    mService.startServiceMonitoring();
+                break;
+            case IListener.CALLBACK_SEND_MESSAGE:
+                if(mService != null && arg2 != null)
+                    mService.sendMessageToRemote(arg2);
+
+            default:
+                break;
+        }
     }
 
 }
