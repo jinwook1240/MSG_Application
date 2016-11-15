@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
@@ -17,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.msg_application.subtitle.utils.Constants;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -40,13 +42,18 @@ public class MainActivity extends Activity {
         //setSupportActionBar(toolbar);
 
         TextView bt = (TextView) findViewById(R.id.nextbutton1);
-
+        AppCompatButton tb = (AppCompatButton) findViewById(R.id.Toolbarbutton);
+        tb.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                startActivityForResult(new Intent(getApplicationContext(), DeviceListActivity.class), Constants.REQUEST_CONNECT_DEVICE);
+            }
+        });
         bt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 if(ifBarcodeCaptured){
                     Intent intent = new Intent(getApplicationContext() , TitleActivity.class);
-                    intent.putExtra("name",result);
+                    intent.putExtra("scaninfo",result);
                     startActivity(intent);
                 }
             }
@@ -102,20 +109,6 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

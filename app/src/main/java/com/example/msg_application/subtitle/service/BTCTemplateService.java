@@ -31,7 +31,7 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.msg_application.bluetooth.*;
+import com.example.msg_application.subtitle.bluetooth.*;
 import com.example.msg_application.subtitle.bluetooth.BluetoothManager;
 import com.example.msg_application.subtitle.bluetooth.ConnectionInfo;
 import com.example.msg_application.subtitle.bluetooth.TransactionBuilder;

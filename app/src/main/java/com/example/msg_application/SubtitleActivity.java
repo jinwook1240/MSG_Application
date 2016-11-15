@@ -1,16 +1,29 @@
 package com.example.msg_application;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.msg_application.subtitle.service.BTCTemplateService;
+import com.example.msg_application.subtitle.utils.AppSettings;
+import com.example.msg_application.subtitle.utils.Constants;
 import com.google.zxing.client.android.integration.IntentIntegrator;
 import com.google.zxing.client.android.integration.IntentResult;
 
@@ -18,6 +31,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,20 +41,107 @@ import java.util.regex.Pattern;
 
 public class SubtitleActivity extends Activity
 {
-
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    TextView req1 = (TextView) findViewById(R.id.requesttxt1 );
-    TextView req2 = (TextView) findViewById(R.id.requesttxt2 );
-    TextView bt = (TextView) findViewById(R.id.nextbutton1);
-
+    final int version = Build.VERSION.SDK_INT;
+    static TextView req1;
+    TextView req2;
+    TextView bt;
+    private ImageView mImageBT;
+    String scaninfo;
+    private Context mContext;
+    private ActivityHandler mActivityHandler;
+    private FragmentManager mFragmentManager;
 
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Thread sender = new Timethread(Environment.getExternalStorageDirectory().getAbsolutePath()+"/subtitle");
+        setContentView(R.layout.subtitle_main);
+        mContext = this;	//.getApplicationContext();
+        AppSettings.initializeAppSettings(mContext);
+
+
+        Intent in = getIntent();
+        Bundle extras = in.getExtras();
+        scaninfo = extras.getString("scaninfo");
+
+        req1 = (TextView) findViewById(R.id.bluetoothtxt1 );
+        req1.setText(scaninfo);
+        req2 = (TextView) findViewById(R.id.bluetoothtxt2 );
+        bt = (TextView) findViewById(R.id.bluetoothbtn1);
+        mImageBT = (ImageView) findViewById(R.id.status_title);
+        final Thread sender = new Timethread("subtitle");
+        bt.setBackgroundColor(Color.BLUE);
+        bt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(sender.isAlive()) {
+                    sender.interrupt();
+                }else{
+                    sender.start();
+                }
+            }
+        });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_scan:
+                // Launch the DeviceListActivity to see devices and do scan
+                doScan();
+                return true;
+            case R.id.action_discoverable:
+                // Ensure this device is discoverable by others
+                ensureDiscoverable();
+                return true;
+        }
+        return false;
+    }
+
+
+
+
+    private void doScan() {
+        Intent intent = new Intent(this, DeviceListActivity.class);
+        startActivityForResult(intent, Constants.REQUEST_CONNECT_DEVICE);
+    }
+
+    private void ensureDiscoverable() {
+        if (mService.getBluetoothScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
+            Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            intent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+            startActivity(intent);
+        }
+    }
+
+
+    final Handler handler = new MyHandler(this);
+
+    private static class MyHandler extends Handler {
+        private final WeakReference<SubtitleActivity> mActivity;
+
+        public MyHandler(SubtitleActivity activity) {
+            mActivity = new WeakReference<SubtitleActivity>(activity);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            SubtitleActivity activity = mActivity.get();
+            if (activity != null) {
+                req1.setText((String)msg.obj);
+            }
+        }
+    }
+
+
+
 
     class Timethread extends Thread {
         String SdcardPath = Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -86,6 +187,11 @@ public class SubtitleActivity extends Activity
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                handler.sendEmptyMessage(1);
+
+                Message message= Message.obtain();
+                message.obj = messagem.toString();
+                handler.sendMessage(message);
                 sendMessage(messagem.toString());
             }
         }
@@ -143,6 +249,7 @@ public class SubtitleActivity extends Activity
 
         private IListener mListener =null;
         // Sends user message to remote
+
         private void sendMessage(String message1) {
 
             if(message1 == null || message1.length() < 1)
@@ -174,7 +281,6 @@ public class SubtitleActivity extends Activity
 
 
     BTCTemplateService mService;
-    mActivityHandler = new ActivityHandler();
 
 
     public class ActivityHandler extends Handler {
@@ -185,39 +291,39 @@ public class SubtitleActivity extends Activity
                 // Receives BT state messages from service
                 // and updates BT state UI
                 case Constants.MESSAGE_BT_STATE_INITIALIZED:
-                    mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                    req2.setText(/*getResources().getString(R.string.bt_title)*/"MSG 상태" + ": " +
                             getResources().getString(R.string.bt_state_init));
-                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_invisible));
+                    mImageBT.setImageDrawable(getDrawable(android.R.drawable.presence_invisible));
                     break;
                 case Constants.MESSAGE_BT_STATE_LISTENING:
-                    mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                    req2.setText(/*getResources().getString(R.string.bt_title)*/"MSG 상태" + ": " +
                             getResources().getString(R.string.bt_state_wait));
-                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_invisible));
+                    mImageBT.setImageDrawable(getDrawable(android.R.drawable.presence_invisible));
                     break;
                 case Constants.MESSAGE_BT_STATE_CONNECTING:
-                    mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                    req2.setText(/*getResources().getString(R.string.bt_title)*/"MSG 상태" + ": " +
                             getResources().getString(R.string.bt_state_connect));
-                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_away));
+                    mImageBT.setImageDrawable(getDrawable(android.R.drawable.presence_away));
                     break;
                 case Constants.MESSAGE_BT_STATE_CONNECTED:
                     if(mService != null) {
                         String deviceName = mService.getDeviceName();
                         if(deviceName != null) {
-                            mTextStatus.setText(getResources().getString(R.string.bt_title) + ": " +
+                            req2.setText(/*getResources().getString(R.string.bt_title)*/"MSG 상태" + ": " +
                                     getResources().getString(R.string.bt_state_connected) + " " + deviceName);
-                            mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_online));
+                            mImageBT.setImageDrawable(getDrawable(android.R.drawable.presence_online));
                         }
                     }
                     break;
                 case Constants.MESSAGE_BT_STATE_ERROR:
-                    mTextStatus.setText(getResources().getString(R.string.bt_state_error));
-                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_busy));
+                    req2.setText(getResources().getString(R.string.bt_state_error));
+                    mImageBT.setImageDrawable(getDrawable(android.R.drawable.presence_busy));
                     break;
 
                 // BT Command status
                 case Constants.MESSAGE_CMD_ERROR_NOT_CONNECTED:
-                    mTextStatus.setText(getResources().getString(R.string.bt_cmd_sending_error));
-                    mImageBT.setImageDrawable(getResources().getDrawable(android.R.drawable.presence_busy));
+                    req2.setText(getResources().getString(R.string.bt_cmd_sending_error));
+                    mImageBT.setImageDrawable(getDrawable(android.R.drawable.presence_busy));
                     break;
 
                 ///////////////////////////////////////////////
@@ -225,10 +331,10 @@ public class SubtitleActivity extends Activity
                 // do the UI works like below
                 ///////////////////////////////////////////////
                 case Constants.MESSAGE_READ_CHAT_DATA:
-                    if(msg.obj != null) {
-                        ExampleFragment frg = (ExampleFragment) mSectionsPagerAdapter.getItem(FragmentAdapter.FRAGMENT_POS_EXAMPLE);
+                    if(msg.obj != null) {/*
+                        SubtitleActivity sub = (SubtitleActivity) mSectionsPagerAdapter.getItem(FragmentAdapter.FRAGMENT_POS_EXAMPLE);
                         TestFragment tfrg = (TestFragment) mSectionsPagerAdapter.getItem(FragmentAdapter.FRAGMENT_POS_EXAMPLE);
-                        frg.showMessage((String)msg.obj);
+                        frg.showMessage((String)msg.obj);*/
                     }
                     break;
 

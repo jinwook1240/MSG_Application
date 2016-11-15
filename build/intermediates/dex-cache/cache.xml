@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7b92ab3b60df314fc62f6d06c3fcc63cf50eb57a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
         <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_52836826562b2ffa2f54de0212fe8f3b0ee88ed9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\CLP\Desktop\Workspace\AndroidApp\MSG_Application\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7b92ab3b60df314fc62f6d06c3fcc63cf50eb57a.jar" />
     </item>
     <item
         is-multidex="false"

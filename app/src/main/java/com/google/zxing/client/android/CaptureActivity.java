@@ -300,7 +300,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     // barcode was found (e.g. contact info) rather than the full contents, which they won't
     // have time to read.
     ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
-    statusView.setText("QR??? ?????!");
+    statusView.setText("QR코드를 분석 중입니다!");
 
     if (copyToClipboard) {
       ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
@@ -346,15 +346,15 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private void displayFrameworkBugMessageAndExit() {
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
     builder.setTitle(getString(R.string.app_name));
-    builder.setMessage("???????? ???? ???? ????");
-    builder.setPositiveButton("???????", new FinishListener(this));
+    builder.setMessage("외부 QR코드 앱으로 연결합니다.\n");
+    builder.setPositiveButton("OK", new FinishListener(this));
     builder.setOnCancelListener(new FinishListener(this));
     builder.show();
   }
 
   private void resetStatusView() {
     resultView.setVisibility(View.GONE);
-    statusView.setText("???????????.");
+    statusView.setText("QR 코드를 보여주세요.");
     statusView.setVisibility(View.VISIBLE);
     viewfinderView.setVisibility(View.VISIBLE);
     lastResult = null;

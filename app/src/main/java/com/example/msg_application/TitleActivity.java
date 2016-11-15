@@ -17,6 +17,7 @@ import com.google.zxing.client.android.integration.IntentResult;
  */
 
 public class TitleActivity extends Activity {
+    String scaninfo;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -28,14 +29,16 @@ public class TitleActivity extends Activity {
 
         bt.setBackgroundColor(Color.rgb(12,111,255));
         bt.setText("임시 버튼.");
+        Bundle extras = getIntent().getExtras();
+        scaninfo = extras.getString("scaninfo");
 
-
+        req1.setText(scaninfo);
 
         bt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                     Intent intent = new Intent(getApplicationContext() , SubtitleActivity.class);
-                    intent.putExtra("name","넘어갈 자료");
+                    intent.putExtra("scaninfo",scaninfo);
                     startActivity(intent);
             }
         });

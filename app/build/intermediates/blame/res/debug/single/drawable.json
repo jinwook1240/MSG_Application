@@ -20,8 +20,8 @@
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\splash.jpg",
-        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\splash.jpg"
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\playbar_upper.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\playbar_upper.png"
     },
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
@@ -36,6 +36,10 @@
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\playbar_under.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\playbar_under.png"
+    },
+    {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\listbutton.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\listbutton.png"
     },
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
@@ -70,6 +78,10 @@
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\movietitle.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\movietitle.png"
     },
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
@@ -108,12 +120,20 @@
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\movieinfo.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\movieinfo.png"
+    },
+    {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\splash.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\splash.png"
     },
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
@@ -178,6 +198,10 @@
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circle.png",
+        "source": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\src\\main\\res\\drawable\\circle.png"
     },
     {
         "merged": "C:\\Users\\CLP\\Desktop\\Workspace\\AndroidApp\\MSG_Application\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
