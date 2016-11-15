@@ -3,15 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.msg_application.MainActivity">
     <item
-        android:id="@+id/action_scan"
-        android:orderInCategory="10"
-        android:icon="@android:drawable/ic_menu_view"
-        android:showAsAction="always|withText"
-        android:title="@string/connect"/>
-
-    <item
-        android:id="@+id/action_discoverable"
-        android:orderInCategory="40"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="@string/discoverable" />
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
 </menu>
